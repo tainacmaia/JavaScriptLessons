@@ -1,0 +1,25 @@
+//FUNÇÕES
+function saudacao() {
+    console.log('Bem-vindo!')
+}
+//chamando a função:
+saudacao()
+
+function ola(nome, sobrenome) {
+    console.log('Olá,', nome, sobrenome)
+}
+const input = require('readline-sync')
+let nome = input.question('Qual seu nome? ')
+ola(nome)
+//se não passar parâmetro não retorna erro, mas retorna uma variável 'undefined', mas é possível definir um padrão pra quando não seja passado:
+function ola2(nome, sobrenome='Maia') {
+    console.log('Olá,', nome, sobrenome)
+}
+ola2(nome)
+
+function soma(numero1, numero2) {
+    return numero1 + numero2
+    //o return encerra a função, o que vier depois dele não vai ocorrer, a menos que haja uma condição (if, else, while...) que permita isso
+    console.log('Teste')
+}
+console.log('Soma de 10 + 20:', soma(10,20))
